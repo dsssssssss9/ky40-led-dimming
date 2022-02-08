@@ -4,8 +4,7 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*",
-        "pxt-ky-040": "github:MKleinSB/pxt-KY-040#v1.0.4"
+        "microphone": "*"
     },
     "files": [
         "main.blocks",
