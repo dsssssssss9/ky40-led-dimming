@@ -2,6 +2,7 @@ input.onButtonPressed(Button.A, function () {
     Act_B += B_Step
     if (Act_B >= Max_B) {
         Act_B = Max_B
+        basic.showString("Max")
     }
     pins.analogWritePin(AnalogPin.P0, Act_B)
 })
@@ -9,6 +10,7 @@ input.onButtonPressed(Button.B, function () {
     Act_B += B_Step * -1
     if (Act_B <= Min_B) {
         Act_B = Min_B
+        basic.showString("Min")
     }
     pins.analogWritePin(AnalogPin.P0, Act_B)
 })
