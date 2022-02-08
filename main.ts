@@ -26,6 +26,20 @@
  * DT    ----->     PIN15
  * 
  * SW     *NOT USED*
+ * 
+ * ------------------------------------------------------
+ * 
+ * MIN_B    =   Minimum LED brightness
+ * 
+ * Max_B    =   Maximum LED Brightness
+ * 
+ * Act_B      =   Current displayed LED Brightness
+ * 
+ * B_Step    =   Amount to alter brightness per click of the Encoder
+ * 
+ * ---------------------------------------------------------------------------------------------
+ * 
+ * When Max / Min Brightness level is reached value will not go higher/lower & Micro:Bit Display informs user they have reached Max/Min level
  */
 KY040.onTurned(direction.clockwise, function () {
     Act_B += B_Step * -1
@@ -47,7 +61,7 @@ let B_Step = 0
 let Act_B = 0
 let Max_B = 0
 let Min_B = 0
-basic.showIcon(IconNames.Skull)
+basic.showIcon(IconNames.Happy)
 KY040.setKY040(DigitalPin.P14, DigitalPin.P15)
 Min_B = 0
 Max_B = 1023
