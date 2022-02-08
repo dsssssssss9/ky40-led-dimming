@@ -1,3 +1,32 @@
+/**
+ * Use KY-40 Rotary Encoder to alter brightness of External LED
+ * 
+ * using analogue output of Micro:Bit - sort of simple PWM
+ * 
+ * -------------------------------------------------------------------------------------
+ * 
+ * Uses KY-40 Extension by M Klein...
+ * 
+ * https://github.com/MKleinSB/pxt-KY-040
+ * 
+ * ------------------------------------------------------------------
+ * 
+ * Led connected to PIN0 & GND via a 470Ω resistor to limit current
+ * 
+ * -----------------------------------------------------------------------------
+ * 
+ * KY-40 Encoder connected  as follows.....
+ * 
+ * GND  ----->    GND
+ * 
+ * +        ----->    3v
+ * 
+ * CLK   ----->    PIN14
+ * 
+ * DT    ----->     PIN15
+ * 
+ * SW     *NOT USED*
+ */
 KY040.onTurned(direction.clockwise, function () {
     Act_B += B_Step * -1
     if (Act_B <= Min_B) {
