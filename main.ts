@@ -1,4 +1,7 @@
 input.onButtonPressed(Button.A, function () {
+	
+})
+KY040.onTurned(direction.clockwise, function () {
     Act_B += B_Step
     if (Act_B >= Max_B) {
         Act_B = Max_B
@@ -18,7 +21,8 @@ let B_Step = 0
 let Act_B = 0
 let Max_B = 0
 let Min_B = 0
-basic.showIcon(IconNames.Giraffe)
+basic.showIcon(IconNames.Pitchfork)
+KY040.setKY040(DigitalPin.P14, DigitalPin.P15)
 Min_B = 0
 Max_B = 1023
 Act_B = 0
